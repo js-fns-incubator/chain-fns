@@ -38,7 +38,9 @@ If you want to make it a little bit shorter, just assign `_.chain` to some varia
 
 ``` js
 f = _.chain
-f([1,2,3]).map(function(x) { return x * x}).tail().value() // => [4,9]
+f([1,2,3]).map(function(x) { return x * x}).tail().value() // slightly shorter chaining 
+_([1,2,3]).map(function(x) { return x * x}) // if you want to use it w/o chaining
+_.map([1,2,3], function(x) { return x * x}) // if you want to use it as a module
 ```
 
 But if you like the way how it's done here, with function wrapper, try this:
